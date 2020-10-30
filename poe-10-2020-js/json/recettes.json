@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "titre" : "",
+    "description" : "",
+    "ingredient": {
+      "nom" : "",
+      "quantite" : "",
+      "unite" : ""
+    },
+    "etapes" : {
+
+    }
+  }
+]

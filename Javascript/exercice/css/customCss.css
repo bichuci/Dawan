@@ -1,0 +1,38 @@
+.headerColors
+{
+    background-color: crimson;
+    color:white;
+    font-weight: bold;
+    border-color: darkred;
+}
+
+.breadcrumb-item + .breadcrumb-item::before
+{
+    content :">"
+}
+
+@media (min-width: 992px)
+{
+    .customFooter-left
+    {
+        text-align: left;
+    }
+
+    .customFooter-right
+    {
+        text-align: right;
+    }
+}
+
+@media (max-width: 992px)
+{
+    .customFooter-left
+    {
+        text-align: center;
+    }
+
+    .customFooter-right
+    {
+        text-align: center;
+    }
+}

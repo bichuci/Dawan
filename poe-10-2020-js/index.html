@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript Galerie d'images v2.0 </title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet"> 
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/poppers.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin="" />
+    <script src="./js/introduction.js"></script>
+    <link rel="stylesheet" href="./css/all.css">
+
+    <style>
+        h1{
+            font-family: 'Rochester', cursive;
+        }
+        #map{ /* la carte DOIT avoir une hauteur sinon elle n'apparaît pas */
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Dawan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>   
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                <a class="nav-link" href="./index.html"> Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            </div>
+        </nav>
+    <header>
+        <h1 class="m-4">Mon cours Javascript</h1>
+    </header>
+    
+    <main class="container border-info border-top ">
+        <h2>Les data-attributes</h2>
+        <section class="row border-top border-info">
+            <article id ="dataColor"class="col-lg-6 mt-3">
+                
+                <!-- ff => 255; 00 => 0; 00  => f00; aa8822 => a82-->
+                <p data-color="#ff0000" class="text-justify">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt enim nobis debitis libero qui nam modi? Maiores itaque ex voluptas sit, dolor, repudiandae, esse dolorem reiciendis rerum hic alias porro!
+                </p>
+                <p data-color="#00ff00" class="text-justify">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci earum illo eos aspernatur provident reiciendis eum quis, corrupti aliquid atque obcaecati saepe veniam asperiores! Commodi necessitatibus itaque error quasi et.
+                </p>
+                <p data-color="#0000ff" class="text-justify">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos harum, dicta iure magni autem exercitationem nihil doloremque quaerat repudiandae perferendis provident ipsum deleniti maiores veritatis, sunt dolore officia aperiam cum?
+
+                </p>
+            </article>
+
+            <article class="col-lg-6  mt-3">
+                <h2>Puissance 4</h2>
+                <table class="table table-bordered" id = "p4">
+                    <thead>
+                        <tr class="text-center">
+                            <th data-col="1"><i class="fas fa-arrow-down"></i></th>
+                            <th data-col="2"><i class="fas fa-arrow-down"></i></th>
+                            <th data-col="3"><i class="fas fa-arrow-down"></i></th>
+                            <th data-col="4"><i class="fas fa-arrow-down"></i></th>
+                            <th data-col="5"><i class="fas fa-arrow-down"></i></th>
+                            <th data-col="6"><i class="fas fa-arrow-down"></i></th>
+                            <th data-col="7"><i class="fas fa-arrow-down"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-row="2">
+                            <td data-col="1" data-row="2">&nbsp;</td>
+                            <td data-col="2" data-row="2"></td>
+                            <td data-col="3" data-row="2"></td>
+                            <td data-col="4" data-row="2"></td>
+                            <td data-col="5" data-row="2"></td>
+                            <td data-col="6" data-row="2"></td>
+                            <td data-col="7" data-row="2"></td>
+                        </tr>
+                        <tr data-row="3">
+                            <td data-col="1" data-row="3">&nbsp;</td>
+                            <td data-col="2" data-row="3"></td>
+                            <td data-col="3" data-row="3"></td>
+                            <td data-col="4" data-row="3"></td>
+                            <td data-col="5" data-row="3"></td>
+                            <td data-col="6" data-row="3"></td>
+                            <td data-col="7" data-row="3" id="test"></td>
+                        </tr>
+                        <tr data-row="4">
+                            <td data-col="1" data-row="4">&nbsp;</td>
+                            <td data-col="2" data-row="4"></td>
+                            <td data-col="3" data-row="4"></td>
+                            <td data-col="4" data-row="4"></td>
+                            <td data-col="5" data-row="4"></td>
+                            <td data-col="6" data-row="4"></td>
+                            <td data-col="7" data-row="4"></td>
+                        </tr>
+                        <tr data-row="5">
+                            <td data-col="1" data-row="5">&nbsp;</td>
+                            <td data-col="2" data-row="5"></td>
+                            <td data-col="3" data-row="5"></td>
+                            <td data-col="4" data-row="5"></td>
+                            <td data-col="5" data-row="5"></td>
+                            <td data-col="6" data-row="5"></td>
+                            <td data-col="7" data-row="5"></td>
+                        </tr>
+                        <tr data-row="6">
+                            <td data-col="1" data-row="6">&nbsp;</td>
+                            <td data-col="2" data-row="6"></td>
+                            <td data-col="3" data-row="6"></td>
+                            <td data-col="4" data-row="6"></td>
+                            <td data-col="5" data-row="6"></td>
+                            <td data-col="6" data-row="6"></td>
+                            <td data-col="7" data-row="6"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <section class="row border-top border-info mt-2 " >
+            <h1>Le jeu du pendu</h1>
+            <article class="col-lg-12 mt-2 d-flex justify-center">
+                <canvas class="d-block m-auto" id="pendu" width="500" height="500" style="background-color: #eee;"></canvas>
+                <script src="./js/introduction.js"></script>
+            </article>
+        </section>
+        <section class="row border-top border-info">
+            <article class="col-lg-12">
+                <h1>Gestion Email/ bulk actions</h1>
+                <div id="listeEmails">
+                    <table class = "table table-dark table-striped table-hover table-bordered">
+                        <thead>
+                            <tr>
+                                <th><input type = "checkbox" id="selectAll" /></th>
+                                <th>Sender</th> <th>Title</th> <th>Read</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody-light">
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+        <section class="row border-top border-info">
+            <article class="col-lg-12">
+                <h1>Recherche dynamique</h1>
+                <form id="formSearchCity">
+                    <div class=" input-group mb-3">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-info">Rechercher</button>
+                        </div>
+                        <input type="search" name = "searchCity" class="form-control" id="searchCity">
+                    </div>
+                </form>
+                <div style="z-index:10;" id="divSearchResult"></div>
+            </article>
+        </section>
+        <section class="row border-top border-info">
+            <div class="col-lg-12 d-flex">
+                <h1 class="col-lg-8">Api mondial relais</h1>
+                <h1 class="col-lg-4">User List</h1>
+            </div>
+            <article class="col-lg-12 row ">
+                <div id="pinPoint" class="col-lg-8">
+                    <div id="map" >
+                    <!-- Ici s'affichera la carte -->
+                    </div>
+                </div>
+                <div class="col-lg-4 " style="height: 400px; overflow: auto; border:1px solid #dc143c" id="locate">
+                    <table class="table table-bordered">
+                        <thead>
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                        </thead>
+                        <tbody class="tbody-light">
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </section>
+        <section class="row border-top border-info mt-2">
+            <article class="col-lg-12">
+                <h1>Aide utilisateurs cookies</h1>
+                <button class="btn btn-info " data-toggle="modal" data-target="#exampleModal" id="aideUserButton">
+                   Activer l'aide utilisateur
+                </button>
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Assistance utilisateurs</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <button id="dismissAssistance" class="btn btn-primary" data-dismiss="modal">Désactiver l'assistance</button>
+                                <button id="destroyAssistUser" class="btn btn-primary" data-dismiss="modal">Détruire le cookie de l'assistance</button>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button id="saveAssistUser" type="button" data-dismiss="modal" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="text-center">
+        &copy; Aurélien Walter 2020-10
+    </footer>
+</body>
+</html>

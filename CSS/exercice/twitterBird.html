@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>sprite twitter</title>
+		<style type="text/css">
+			#twitter{
+				height: 150px;
+				width: 150px;
+				background: url('../../img/twitter-birds.png');
+				margin: 150px auto;
+				animation: fly steps(4) .5s infinite;
+				
+			}
+
+			@keyframes fly {
+				0%{ background-position: 0 0;
+				margin: 150px -600px; }
+				100%{ background-position: -600px 0;
+					margin: 150px 1800px; }
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="twitter"></div>
+	</body>
+</html>

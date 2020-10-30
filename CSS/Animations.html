@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations et transitions</title>
+
+    <style>
+        .elias{
+            width:200px;
+            transition-property: width;
+            transition-delay: 0.5s;
+            transition-duration: 1s;
+            transition-timing-function: linear;
+        }
+
+        .elias:hover
+        {
+            width:500px;
+        }
+
+        .btn
+        {
+            display:block;  
+            width:200px;
+            padding:10px 0;
+            color:darkolivegreen;
+            border:solid medium;
+            text-align: center;
+            border-radius: 0px 8px 0px 8px;
+            transition-property: font-weight, color, background-color;
+            transition-delay: 300ms;
+            transition-duration: 500ms;
+        }
+
+        .btn:hover
+        {
+            background-color: darkorange;
+            color:white;
+            font-weight: bold;
+        }
+
+        .color
+        {
+            width:300px;
+            height:300px;
+            border:solid medium;
+            animation-name: changeColor;
+            animation-duration: 8s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-play-state: paused;
+        }
+
+        .color:hover
+        {
+            animation-play-state: running;
+        }
+
+        p{
+            animation-name: move;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            height:1.5em;
+        }
+
+        @keyframes changeColor
+        {
+            from
+            {
+                background-color: darkorange;
+                width:300px;
+                height:300px;
+            }
+            25%
+            {
+                background-color: darkred;
+                width:350px;
+                height:350px;
+            }
+            50%
+            {
+                background-color: darkviolet;
+                width:400px;
+                height:400px;
+            }
+            75%
+            {
+                background-color: darkorchid;
+                width:400px;
+                height:400px;
+            }
+            to
+            {
+                background-color: darkorange;
+                width:300px;
+                height:300px;
+            }
+        }
+
+        @keyframes move
+        {
+            from
+            {
+                margin-left:300px;
+            }
+            to
+            {
+                margin-left: -100px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <img class="elias" src="../img/elias.jpg" alt="La pluie de grenouille d'tes mortss">
+
+    <button class ="btn">Validation</button>
+
+    <div class="color"></div>
+
+    <p>Hello World!</p>
+</body>
+</html>

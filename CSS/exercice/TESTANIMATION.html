@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUTAIN DE TEST</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+
+        .rpg
+        {
+            height:  150px;
+            width: 106px;
+            background: url('../../img/rpg.png') ;
+            animation : run steps(4) .4s infinite ;
+            /* animation : hello steps(5) 2s infinite; */
+            position: relative;
+            display:block;
+        }
+
+        .move{
+            width:100%;
+            height:  150px;
+            animation : move  10s infinite;
+            position: relative;
+            display:block;
+        }
+        @keyframes run
+        {
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: -850px 0;
+            }
+        }
+
+        @keyframes move
+        {
+            0%{
+               margin: 0 -20%;
+               transform: scaleX(1);
+            }
+            40%{
+                margin: 0 100%;
+                transform: scaleX(1);
+            }
+            50%
+            {
+                margin : 0 120%;
+                transform: scaleX(1);
+               
+            }
+            60%
+            {
+                margin: 0 60%;
+                transform: scaleX(-1);
+            }
+            80%
+            {
+                margin:0 20%;
+                transform: scaleX(-1);
+            }
+            100%
+            {
+                margin: 0 -120%;
+                transform: scaleX(-1);
+            }
+        
+        }
+        </style>
+</head>
+<body>
+    <div class="move">
+            <div class="rpg"></div>
+    </div>
+</body>
+</html>

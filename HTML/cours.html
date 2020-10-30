@@ -1,0 +1,88 @@
+<!DOCTYPE html> <!-- Pour déclarer une page html-->
+<html lang="fr"> <!-- On met notre code entre deux balises html et éventuellement la langue -->
+<!-- On met les informations pour le navigateur-->
+<head>
+    <meta charset="UTF-8"> <!-- L'encodage charset : UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/cours.css">
+    <title>Cours HTML</title> <!-- Le titre de notre page -->
+</head>
+<!-- Le contenu de la page html -->
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="#">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class ="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="#">Nos produits <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">A propos <span class="sr-only">(current)</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="form-inline">
+                    <input class="form-control" placeholder="Search">
+                    <button class="btn btn-outline-success ml-1">Rechercher</button>
+                </form>
+                
+        </nav>
+    </header>
+
+    <main class ="container">
+        <!-- Les tableaux -->
+        <h1>Les tableaux </h1>
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Jour</th>
+                    <th scope="col">Mois</th>
+                    <th scope="col">Année</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#1</td>
+                    <td>1</td>
+                    <td>Janvier</td>
+                    <td>2020</td>
+                    <td>
+                        <button class="btn btn-primary ml-1">Valider</button>
+                        <button class="btn btn-secondary ml-1">Modifier</button>
+                        <button class="btn btn-danger ml-1">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#2</td>
+                    <td>2</td>
+                    <td>Février</td>
+                    <td>2020</td>
+                    <td>
+                        <button class="btn btn-primary ml-1">Valider</button>
+                        <button class="btn btn-secondary ml-1">Modifier</button>
+                        <button class="btn btn-danger ml-1">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#3</td>
+                    <td>3</td>
+                    <td>Mars</td>
+                    <td>2020</td>
+                    <td>
+                        <button class="btn btn-primary ml-1">Valider</button>
+                        <button class="btn btn-secondary ml-1">Modifier</button>
+                        <button class="btn btn-danger ml-1">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

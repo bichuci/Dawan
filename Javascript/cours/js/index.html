@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/jquery-3.5.1.js" ></script>
+    <script>
+        //#region /* JQuery va commencer ici */
+        /* Vanilla version (sans mod) */
+        /*jQuery(document).ready(function(){
+            console.log("JQuery est prêt !");
+        });*/
+
+        /* version simplifiée */
+        /*jQuery(function(){
+            console.log("JQuery est prêt !");
+        });*/
+
+        /* version simplifiée en utilisant l'alias */
+        /* ATTENTION : utiliser l'alias peut générer des comflit si d'autres 
+        bibliothèques ou framework js sont utilisés */
+        /*$(function(){
+            console.log("JQuery est prêt !");
+        });*/
+        /* pour utiliser l'alias $ et éviter les conflits */
+        jQuery(function($){
+            let compteurClicParagraphe = 0;
+            let compteurClicPSpecial = 0;
+            console.log("JQuery est prêt !");
+            $("#firstBlood").click( function(){
+                console.log("Quelqu'un a cliqué sur le bouton");
+            }).mouseover(function(){
+                $("#pSpecial").css("color", "green");
+            }).on("mouseout", function(){
+                $("#pSpecial").css("color", "black");
+            });
+            /* cibler tous les paragraphe de lapage sauf #pSpecial */
+            $("p:not(#pSpecial)").click(() => {
+                compteurClicParagraphe++;
+                console.log(`clic n° ${compteurClicParagraphe} sur un des paragraphes`);
+            });
+
+            $("#pSpecial").click(() => {
+                compteurClicPSpecial++;
+                console.log(`clic n° ${compteurClicPSpecial} sur le paragraphe spécial`);
+            });
+
+            /*$("p").mouseover(function(){
+                $(this).css("color", "green");
+            }).mouseout(function(){
+                $(this).css("color", "black");
+            });*/
+            
+            $(".divLettreCercle:first").click(function(){
+                console.log("Div A");
+            });
+            $(".divLettreCercle:eq(1)").click(function(){
+                console.log("Div B");
+            });
+            $(".divLettreCercle:last").click(function(){
+                console.log("Div C");
+            });
+
+            $("p .lien").css("color", "red");
+
+            $("p>.lien").css("color", "green");
+
+            $("#nom").focus(function(){
+                console.log("le focus est dans l'input nom");
+            });
+
+            $("input[type=text]").focus(function(){
+                console.log("le focus est dans un imput de type text");
+            });
+
+            $("input:submit").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                alert("formulaire soumis");
+                $("#form1").submit();
+            });
+
+            $("p.demoThis").click(function(){
+                console.log("test");
+                $(this).css("color", "red");
+            });
+
+            $("p.resetColors").click(function(){
+                $("p.demoThis").each(function(){
+                    $(this).css("color", "black");
+                    console.log($(this).text());
+                });
+                //$("p.demoThis").css("color", "black");
+            });
+
+            $(document).keyup(function(touche){
+                //console.log(touche);
+                let appui = touche.which || touche.keyCode;
+                //console.log(appui);
+                let touche2 = touche.key;
+                //console.log(touche2);
+                if(appui === 13){
+                    $("#quelleTouche").text("La touche Entré");
+                }else{
+                    $("#quelleTouche").text(touche2);
+                }
+            });
+
+            $("#gestion01").on("click dblclick", function(){
+                console.log("click & dblclick sur gestion01");
+            });
+
+            $("#gestion02").on({
+                click:function(){
+                    console.log("click gestion02");
+                },
+                dblclick:function(){
+                    console.log("dblclick sur gestion02");
+                },
+            });
+            
+            $("#testNsp").on("click.nom", function(){
+                console.log("Premier évènement");
+            });
+
+            $("#testNsp").on("click.prenom", function(){
+                console.log("Second évènement");
+            });
+
+            $("#testNsp").trigger("click.nom"); 
+            // exécute le clic, MAIS ne lance que le 
+            // premier console.log !
+
+            /*$("#testNspNom").on("click.nom", function(){
+                console.log("troisième évènement");
+            }); */
+
+            //#endregion
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>JQuery</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./rappelsJs.html">Rappels JS</a></li>
+            <li><a href="./index.html">JQuery</a></li>
+            <li><a href="./JQueryCss.html">JQuery & HTML</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <h1>Un framework</h1>
+                <p>
+                    JQuery est un frameworkjavascript, c'est à dire un ensemble 
+                    de fonctions javascript organisées en bibliothèque.
+                </p>
+                <p>
+                    Le but de JQuery est de simplifier le javascript "interractif", 
+                    en simplifiant l'écriture des appels de fonctions, évènements, 
+                    manipulation du DOM, etc.
+                </p>
+            </article>
+            <article>
+                <h1>Principe de fonctionnement</h1>
+                <p>
+                    JQuery repose principalement sur la fonction de base $().
+                    Donc pour agir avec les éléments du dom on procède à un "ciblage" des 
+                    éléments selon des séléecteurs divers (généralement liés au css ou au html).
+                    Ensuite grâce aux méthodes et fonction de JQuery on pourra agir interactivement 
+                    avec ces éléments. 
+                </p>
+                <button id="firstBlood">Cliquez ici</button>
+                <p id="pSpecial">
+                    Ce paragraphe peut être appelé avec le sélecteur "#pSpecial".
+                </p>
+            </article>
+            <article>
+                <h1>Sélecteurs plus poussés</h1>
+                <p>
+                    Sélectionner les éléments selon leurs place
+                </p>
+                <div class="divLettreCercle">A</div>
+                <div class="divLettreCercle">B</div>
+                <div class="divLettreCercle">C</div>
+                <p class="clear">
+                    On fait aussi la différence entre les éléments contenus dans d'autres éléments 
+                    et les descendants directs d'une autre éléments
+                </p>
+                <p>
+                    <a href="#" class="lien">Lien</a><br />
+                    <a href="#" class="lien">Lien</a><br />
+                    <a href="#" class="lien">Lien</a><br />
+                    <a href="#"><span class="lien">Lien</span></a><br />
+                </p>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1>Les formulaires</h1>
+                <form id="form1" method="post">
+                    <p>
+                        Nom : <input type="text" id="nom" name="nom" />
+                    </p>
+                    <p>
+                        Prénom : <input type="text" id="prenom" name="prenom" />
+                    </p>
+                    <p>
+                        <input type="submit" id="submitForm" name="submitForm" value="Envoyer" />
+                    </p>
+                </form>
+            </article>
+            <article>
+                <h1>Le sélecteur $(this)</h1>
+                <p class="demoThis">
+                    Le sélecteur $(this) permet d'associer une action
+                </p>
+                <p class="demoThis">
+                    à l'objet courant qu'il représente
+                </p>
+                <p class="demoThis">
+                    quand on appelle la fonction depuis un élément.
+                </p>
+                <p class="demoThis">
+                    $(this) permet de connaître quel élément de la multitude a déclenché l'action
+                </p>
+                <p class="resetColors">
+                    Cliquez ici pour enlever le rouge
+                </p>
+            </article>
+        </section>
+        <h2>Les évenement</h2>
+        <section>
+            <article>
+                <h1>Évenement sur la souris</h1>
+                <table cellspadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Fonction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clic</td>
+                            <td>click()</td>
+                        </tr>
+                        <tr>
+                            <td>double clic</td>
+                            <td>dblclick()</td>
+                        </tr>
+                        <tr>
+                            <td>Passage de la souris</td>
+                            <td>hover()</td>
+                        </tr>
+                        <tr>
+                            <td>entrer dans un élément</td>
+                            <td>mousenter()</td>
+                        </tr>
+                        <tr>
+                            <td>quitter un élément</td>
+                            <td>mouseleave()</td>
+                        </tr>
+                        <tr>
+                            <td>Presser le clic principal</td>
+                            <td>mousedown()</td>
+                        </tr>
+                        <tr>
+                            <td>Relâcher le clic souris</td>
+                            <td>mouseup()</td>
+                        </tr>
+                        <tr>
+                            <td>Scroller (utiliser la roulette)</td>
+                            <td>scroll()</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h1>Actions sur le clavier</h1>
+                <table cellspadding="0" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Action</th>
+                            <th>Fonction</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Une touche du clavier est enfocée</td>
+                            <td>keydown()</td>
+                        </tr>
+                        <tr>
+                            <td>Maintien d'une touche enfoncée</td>
+                            <td>keypress()</td>
+                        </tr>
+                        <tr>
+                            <td>Relâchement d'une touche préalablement enfoncée</td>
+                            <td>keyup()</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>Quelle touche ?</h2>
+                <p>
+                    Pour lire la touche appuyée par l'utilisateur, il faut bien faire attention 
+                    car la fonction utilisée dépend du navigateur
+                </p>
+                <p id="quelleTouche">
+
+                </p>
+            </article>
+            <article>
+                <h1>Gestionnaire d'évènement</h1>
+                <p>
+                    Le gestionnaire d'évenement permet en une déclaration de gérer plusieurs évenement 
+                    au lieu de créer un écouteur par évenement.
+                </p>
+                <button id="gestion01">
+                    Click & dblclick
+                </button>
+                <button id="gestion02">
+                    Click & dblclick
+                </button>
+            </article>
+            <article>
+                <h1>Déléguer les évenements</h1>
+                <p>
+                    C'est créer un écouteur d'évenement sur un type 
+                    d'élément qui s'adaptera automatiquement aux éléments similaires,
+                    même générés dynamiquement (pas dans le DOM natif). 
+                    Car il n'est pas possible d'associer un écouteur d'évenement 
+                    à un élément qui n'existe pas encore
+                </p>
+                <p>
+                    Pour cela il faut trois éléments
+                </p>
+                <ul>
+                    <li>Le type d'évenement</li>
+                    <li>L'élément concerné</li>
+                    <li>La fonction de retour</li>
+                </ul>
+                <code>
+                    $("div.testDelegation").on("click", "p.testEventDynam", function(){<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log("les p.testEventDynam sont cliqués et cliquables");
+                    });
+                </code>
+            </article>
+        </section>
+        <section>
+            <article>
+                <h1>namespace</h1>
+                <button id="testNsp">Test nsp</button>
+                <button id="testNspNom">Test nsp Nom</button>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

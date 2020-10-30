@@ -1,0 +1,16 @@
+body
+{
+    margin : 0;
+}
+
+body
+{
+    --main-color:#c65d41;
+    --width: 90%;
+}
+
+h1
+{
+    color: var(--main-color);
+}
+

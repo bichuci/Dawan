@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Positions</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .container{
+            width: 500px;
+            height: 500px;
+            border : solid black thick;
+            margin : 200px auto;
+        }
+
+        .box{
+            width:100px;
+            height:100px;
+            background-color: turquoise;
+        }
+
+        .absolute{
+            position:absolute;
+            top: 0;
+            right:10px;
+            /* En position absolue, la boxe se place à un endroit donné, grâce aux attributs "top", "right", "left", ou "bottom".
+                Elle se place, par défaut, par rapport à la fenêtre et non plus par rapport au parent.
+                Si on veut la placer à l'intérieur d'un parent et non de la page, il faut passer le parent en position : relative.
+            */
+        }
+
+        .fixed{
+            background-color: chartreuse;
+            position: fixed;
+            bottom: 50px;
+            right:50px;
+            /* En position fixed, l'élément reste collé à un endroit donné de la fenêtre, même lorsqu'on scroll.
+                On le positionne avec "top", "bottom", "left", "right". Si aucune précision n'est donné, il se place à sa position de base, donc en haut a droite de son parent / en dessous de ses frères.
+            */
+        }
+
+        .static{
+            position: static;
+            top:300px;
+            left: 300px;
+            background-color: #aa00aa;
+            /* La position static est la position par défaut, les valeurs top, left, right, bottom n'ont pas d'effet.
+                La boite se positionnera normalement en suivant le flow du document.
+            */
+        }
+        .relative{
+            background-color: #D4AF37 ;
+            position:relative;
+            bottom:20px;
+            left:20px;
+            /* En position relative, l'élément se place en fonction de sa position initiale par défaut
+            */
+        }
+
+        .sticky{
+            background-color: red;
+            position: sticky;
+            right: 0;
+            top:400px;
+        }
+
+        .nav{
+            height:50px;
+            width:100%;
+            background-color: #28536B;
+            position: sticky;
+            top:0;
+            z-index: 1;
+            /* En position sticky, l'élement reste à la place demandé même en scroll, jusqu'à ce que son parent sorte de la fenêtre.
+                On utilise les z-index pour passer les éléments sous l'élément en sticky ou inversement
+            */
+        }
+
+        .container2 img{
+            width:130px;
+            float:right;
+        }
+
+        .container2{
+            margin: 100px auto;
+            width:500px;
+            border: solid;
+        }
+
+        .image{
+            width: 500px;
+            height:500px;
+            background-image: url(../img/elias.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .gradient{
+            width: 500px;
+            height:500px;
+            border:solid;
+            background : linear-gradient(280deg, red 0%, green 35%, pink 70%, blue 100%);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="nav"></nav>
+    <div class="container">
+        <div class="box absolute"></div>
+        <div class="box fixed"></div>
+        <div class="box static"></div>
+        <div class="box relative"></div>
+        <div class="box sticky"></div>
+    </div>
+
+    <div class="container2">
+
+        <img src="../img/elias.jpg" alt="La pluie de calamité">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet adipisci exercitationem maiores rem, pariatur nemo alias id deleniti nulla ipsum. Provident, officiis velit. Ipsum voluptates nam libero delectus numquam Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam quia illo recusandae porro vitae modi iure vero exercitationem nostrum iusto? Expedita aperiam eum quod nam et voluptate assumenda labore eaque.
+        </p>
+
+        <div class="image"></div>
+
+        <div class="gradient"></div>
+
+        <ul>
+            <li>Home</li>
+            <li>Produits</li>
+            <li>Panier</li>
+            <li>A propos</li>
+        </ul>
+
+    </div>
+</body>
+</html>

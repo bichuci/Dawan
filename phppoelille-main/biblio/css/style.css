@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 5px 0;
+}
+
+ul.navigation {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 40px;
+}
+
+ul.navigation > li {
+    list-style-type: none;
+}
+
+ul.navigation > li > a {
+    display: block;
+    padding: 10px;
+}
+
+ul.list > li {
+    padding: 5px 0;
+}
+
+a, .link {
+    border: none;
+    color: cornflowerblue;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: white;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a:hover, .link:hover {
+    text-decoration: none;
+}

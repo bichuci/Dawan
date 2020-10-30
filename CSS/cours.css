@@ -1,0 +1,50 @@
+/* 
+Unités de mesure : 
+px : pixel -> sa taille dépend de la résolution d'affichage
+em : 1em -> 1 fois la taille par défaut de la police de l'écran
+% : 100% -> 1em , la taille de l'élément par défaut
+rem : par rapport à la taille de l'élément le plus haut/parent
+pt : point d'imprimerie : 1/72 d'inch
+pc : Le pica : 12pt
+cm, mm : déconseillé
+vw -> view width : largeur de la fenêtre
+vh -> view height : hauteur de la fenêtre
+*/
+p
+{
+    text-align: center;
+}
+
+#lien
+{
+    color:red;
+    text-decoration: none;
+}
+
+#titre
+{
+    background-color: chartreuse;
+    text-shadow: 3px 10px 5px rgb(128, 0, 128);
+}
+
+#p1
+{
+    color: forestgreen;
+    text-decoration: line-through blue wavy;
+    text-align: right;
+}
+
+#p2
+{ 
+    color: lightblue;
+    text-decoration: line-through forestgreen dotted;
+    text-align: right;
+}
+
+#special
+{
+    color: brown;
+    text-decoration: line-through yellow wavy;
+    text-align: left;
+
+}

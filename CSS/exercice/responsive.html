@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice Responsive</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            list-style-type: none;
+            text-decoration: none;
+        }
+
+        body
+        {
+            margin: auto;
+            height:100%;
+        }
+
+        main
+        {
+            width: 90%;
+            margin: 0 auto;
+            height:100%;
+        }
+
+        @media screen and (max-width: 576px)
+        {
+            .image
+            {
+                background-image: url(../../img/meute.jpeg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                height:10em;
+            }
+         
+            .image h1
+            {
+                padding-top: 1.5em;
+                text-align: center;
+                color:black;
+            }
+
+            nav
+            {
+                width:100%;
+                position:fixed;
+                bottom:0;
+                height:1.5em;
+                background-color: darkorange;
+            }
+
+            nav ul
+            {
+                width:80%;
+                margin:auto;
+                display: flex;
+                justify-content: space-around;
+                height:100%;
+            }
+
+            nav ul li
+            {
+                display:inline-block;
+                height:100%;
+            }
+
+            nav ul li a
+            {
+                height:100%;
+                display:block;
+                color:white;
+                padding-top: 0.2em;
+            }
+
+            section
+            {
+                height:100%;
+            }
+
+            article
+            {
+                width: 100%;
+                height:100%;
+                display:flex;
+                margin-top:0.5em;
+                margin-bottom: 0.5em;
+                border:solid;
+                border-radius: 5% ;
+            }
+            .haut
+            {
+                background-image: url(../../img/react.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                height:20vh;
+                width:40%;
+            }
+
+            .gauche
+            {
+                width:60%;
+                text-align: center;
+                margin:0.5em;
+            }
+
+            button
+            {
+                margin:0.5em;
+                height:5vh;
+                width:70%;
+                background-color: skyblue;
+                border-radius: 0.5em;
+                border:none;
+                margin-bottom: 0.8em;
+            }
+
+            p
+            {
+                margin:0.5em;
+            }
+        }
+
+        @media screen and (min-width: 576px)
+        {
+            .image
+            {
+                background-image: url(../../img/meute.jpeg);
+                width:100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                height:20vh;
+                text-align: center;
+            }
+
+            .image h1
+            {
+                padding-top: 2em;
+                text-align: center;
+                color:black;
+            }
+
+            nav
+            {
+                width:100%;
+                position:sticky;
+                top:0;
+                height:3em;
+                background-color: darkorange;
+            }
+
+            nav ul
+            {
+                width:80%;
+                margin:auto;
+                display: flex;
+                justify-content: flex-end;
+                height:100%;
+            }
+
+            nav ul li
+            {
+                margin-right: 1em;
+                display:inline-block;
+                height:100%;
+            }
+
+            nav ul li a
+            {
+                height:100%;
+                display:block;
+                color:white;
+                padding-top: 0.6em;
+                font-size: 20px;
+            }
+
+            nav ul li a:hover
+            {
+                border-top: white;
+            }
+
+            section
+            {
+                height:100%;
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                
+            }
+
+            article
+            {
+                width: 30%;
+                height:100%;
+                display:flex;
+                flex-direction: column-reverse;
+                margin-top:0.5em;
+                margin-bottom: 0.5em;
+                border:solid;
+                border-radius: 5%;
+            }
+            .haut
+            {
+                background-image: url(../../img/react.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                height:20vh;
+                width:40%;
+                margin:auto;
+            }
+
+            .gauche
+            {
+                width:80%;
+                margin:auto;
+                text-align: center;
+            }
+
+            button
+            {
+                margin:0.5em;
+                height:5vh;
+                width:70%;
+                background-color: skyblue;
+                border-radius: 0.5em;
+                border:none;
+                margin-bottom: 0.8em;
+            }
+
+            p
+            {
+                margin:0.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Nos produits</a>
+                </li>
+                <li>
+                    <a href="">Contact us</a>
+                </li>
+                <li>
+                    <a href="">About us</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="image">
+            <h1>Responsive Web Design</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <article>
+                <div class="bas gauche">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo eveniet dolores deserunt veniam nobis fugit iure maiores quia voluptas  </p>
+                    <button>Voir</button>
+                </div>
+                <div class="haut droite">
+                </div>
+            </article>
+            <article>
+                <div class="bas gauche">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo eveniet dolores deserunt veniam nobis fugit iure maiores quia voluptas  </p>
+                    <button>Voir</button>
+                </div>
+                <div class="haut droite">
+                </div>
+            </article>
+            <article>
+                <div class="bas gauche">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo eveniet dolores deserunt veniam nobis fugit iure maiores quia voluptas  </p>
+                    <button>Voir</button>
+                </div>
+                    <div class="haut droite">
+                </div>
+            </article>
+
+            <article>
+                <div class="bas gauche">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo eveniet dolores deserunt veniam nobis fugit iure maiores quia voluptas  </p>
+                    <button>Voir</button>
+                </div>
+                    <div class="haut droite">
+                </div>
+            </article>
+            <article>
+                <div class="bas gauche">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo eveniet dolores deserunt veniam nobis fugit iure maiores quia voluptas  </p>
+                    <button>Voir</button>
+                </div>
+                    <div class="haut droite">
+                </div>
+            </article>
+            <article>
+                <div class="bas gauche">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo eveniet dolores deserunt veniam nobis fugit iure maiores quia voluptas  </p>
+                    <button>Voir</button>
+                </div>
+                    <div class="haut droite">
+                </div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

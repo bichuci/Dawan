@@ -1,0 +1,42 @@
+
+- Selection
+
+ - SELECT `column`, `column`, `column` FROM table
+ - SELECT * FROM table /!\ il faut éviter ce genre de requete
+
+ - SELECT * FROM table WHERE `column` = 'value'
+ - SELECT * FROM table WHERE `column` = 'value' AND `column` = 'value'
+ - SELECT * FROM table WHERE `column` = 'value' OR `column` = 'value'
+
+ - SELECT * FROM table ORDER BY `column` ASC
+ - SELECT * FROM table ORDER BY `column` DESC
+
+ - SELECT * FROM table1 JOIN table2 ON table1.column = table2.column
+ - SELECT * FROM table1 LEFT JOIN table2 ON table1.column = table2.column
+ - SELECT * FROM table1 RIGHT JOIN table2 ON table1.column = table2.column
+
+ - SELECT * FROM table LIMIT start line, nb
+
+
+- Ajout
+
+Unique
+ - INSERT INTO table (`column`, `column`) VALUE ('value', 'value');
+Multiple
+ - INSERT INTO table (`column`, `column`) VALUES
+    ('value1', 'value1'), ('value2', 'value2'), ('value3', 'value3');
+
+- Modification
+
+/!\ cette requete modifie tous les enregistrements de la table !
+ - UPDATE table SET `column` = 'value', `column` = 'value'
+
+ - UPDATE table SET `column` = 'value', `column` = 'value'
+ WHERE `column` = 'value'
+
+- Suppression
+
+/!\ cette requete supprimera tous les enregistrements de la table !
+ - DELETE FROM table
+
+ - DELETE FROM table WHERE `column` = 'value'

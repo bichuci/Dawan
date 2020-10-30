@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        div
+        {
+            border:#28536B solid;
+            height: 100px;
+            width: 300px;
+        }
+
+        p
+        {
+            border: #D4AF37 solid;
+            width : 420px;
+            height: 200px;
+        }
+
+        span
+        {
+            background-color: #A9DDD6;
+            width : 100px;
+            height: 100px;
+        }
+
+        img
+        {
+            width:250px;
+            display:block;
+            margin: 20px auto;
+            
+        }
+        img:hover{
+            transform: scale(1.5);
+            cursor:pointer;
+        }
+
+        button:hover
+        {
+            transform:scale(2);
+            cursor:pointer;
+            color: blue;
+            background-color: white;
+            border:1px solid blue;
+        }
+
+        /*LoVe HAte
+        Il faut impérativement modifier les liens dans cet ordre là, sous peine de bug*/
+        
+        a:link{
+            /*Etat par défaut*/
+            color: grey;
+            text-decoration: none;
+        }
+
+        a:visited
+        {
+            /*Quand le lien a déja été visité*/
+            color:lightgray;
+        }
+
+        a:hover{
+            /* Quand on survole avec la souris*/
+            cursor:pointer;
+        }
+
+        a:active{
+            /*Quand on est sur le lien sans avoir appuyer dessus
+            On peut le modifier mais il faut que visuellement on voit cet état par defaut c'est la propriété outline*/
+        }
+
+        /* inline : ce sont des balises de textes, qui se modifie uniquement en fonction de leur contenu et se mettent en ligne (utilisé dans la navbar)
+            Pour les centrer on utilise text-align : center;
+            Par défaut, les balises : <button> <b>, <i>, <span>, <a>, <strong>, <em>, <sub>, <sup> sont automatiquement inline
+
+            block : ce sont des balises qui se comportent comme des boîtes qu'on empile
+            On peut en modifier la taille, et elles se mettent les unes en dessous des autres
+            Ce sont les balises "container", comme les div, p , article, main, section, h1, ul
+            Pour les centrer, on utilise margin : x auto;
+
+            inline-block : les images, les médias etc
+            Ces balises se mettent à la ligne, mais on peut modifier la hauteur et la largeur
+            Pour les centrer, il faut les passer en display block et utiliser les margins ou on les place dans un élément parent de type block, sur lequel on utilise text-align:center;
+
+
+        */
+    </style>
+</head>
+<body>
+    <div>Ma div</div>
+
+    <p>
+        Mon super paragraphe de la mort
+        <button class="btn btn-primary">Valider</button>
+    </p>
+
+    <p>Mon super paragraphe de la mort <span>Avec un span dedans</span></p>
+    
+
+    <img src="../img/elias.jpg" alt="Gare à la pluie de grenouille">
+</body>
+</html>

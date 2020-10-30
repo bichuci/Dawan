@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.text-center
+{
+    text-align:center;
+}
+
+.ligne 
+{
+    width:100%;
+    height:0.5px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+a{
+    color:white;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c5e189589.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet"> 
+    <title>Star Wars Page 2</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        header
+        {
+            width:100%;
+            height: 3em;
+            background-color: black;
+            position: sticky;
+            top:0;
+        }
+
+        nav
+        {
+            height:100%;    
+            width:80%;
+            margin:auto;
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        nav ul li
+        {
+            color:white;
+            display:inline-block;
+            margin: 1em;
+        }
+
+        .container
+        {
+            height : 50vw;
+            background-image: url(../../img/galaxy.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .cardDeck
+        {
+            height:40%;
+            width:80%;
+            margin: auto;
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .card
+        {
+            width:18%;
+            height:70%;
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(170,0,0,1) 100%);
+        }
+
+        .logo
+        {
+            height:100%;
+            display:flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card i
+        {
+            display:block;
+            font-size: 5em;
+            color:white;
+            text-align: center;
+        }
+        .card p
+        {
+            color:white;
+            text-align: center;
+        }
+
+        .desc
+        {
+            width:100%;
+            height:60%;
+        }
+
+        .title
+        {
+            width:80%;
+            margin: auto;
+            height: 50%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .desc h2
+        {
+            font-size: 35px;
+            color: white;
+            font-family: 'Poller One', cursive;
+        }
+
+        .bigArea
+        {
+            width: 80%;
+            height:50%;
+            margin:auto;
+            display:flex;
+        }
+
+        .area
+        {
+            width:15%;
+            margin: auto;
+            text-align: justify;
+        }
+
+        .area i
+        {
+            color:red;
+            font-size: 1em;
+        }
+
+        .area p 
+        {
+            color:white;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>Accueil</li>
+                <li>Actualités</li>
+                <li>Découvrir</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="cardDeck">
+            <div class="card">
+                <div class="logo">
+                    <i class="fab fa-galactic-republic"></i>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="logo">
+                    <i class="fab fa-galactic-republic"></i>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="logo">
+                    <i class="fab fa-galactic-republic"></i>
+                    <p>Lorem Ipsum</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="desc">
+            <article class="title">
+                <h2>Why the Empire?</h2>
+            </article>
+
+            <article class="bigArea">
+                <div class="area">
+                    <p>
+                        <i class="far fa-circle"></i>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, eligendi pariatur? Maiores facilis odio et nam ullam qui perferendis ea atque tenetur dolore eius, sunt, odit quibusdam officiis nisi iure?
+                    </p>
+                </div>  
+                <div class="area">
+                    <p>
+                        <i class="far fa-circle"></i>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, eligendi pariatur? Maiores facilis odio et nam ullam qui perferendis ea atque tenetur dolore eius, sunt, odit quibusdam officiis nisi iure?
+                    </p>
+                </div>
+                <div class="area">
+                    <p>
+                        <i class="far fa-circle"></i>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, eligendi pariatur? Maiores facilis odio et nam ullam qui perferendis ea atque tenetur dolore eius, sunt, odit quibusdam officiis nisi iure?
+                    </p>
+                </div>
+                <div class="area">
+                    <p>
+                        <i class="far fa-circle"></i>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, eligendi pariatur? Maiores facilis odio et nam ullam qui perferendis ea atque tenetur dolore eius, sunt, odit quibusdam officiis nisi iure?
+                    </p>
+                </div>
+            </article>
+            
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+Participant
+- id - clé primaire unique auto increment int
+- nom - varchar(256)
+- prenom
+- email - unique
+- tel
+- adresse - int (11)
+
+Adresse
+- numero
+- rue
+- cp
+- ville
+
+------------------------------------
+
+Livre
+ - id (int)
+ - titre (varchar)
+ - resume (text)
+ - date_publication (date) yyyy-mm-dd
+ - Auteur (int)
+ - Genre (int)
+
+Auteur
+ - id (int)
+ - nom (varchar)
+ - prenom (varchar)
+ - date_naissance (date)
+ - date_deces (date)
+ - biographie (text)
+
+Genre
+ - id (int)
+ - nom (varchar)
+ - description (text)

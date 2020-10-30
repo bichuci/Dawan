@@ -1,0 +1,37 @@
+ORIGIN -> le nom par défaut pour un dépot distant
+
+git branch -a => permet de visualiser toutes les branches
+git checkout --track origin/nomDeLaBranche
+
+git remote show origin => inspecter le dépôt distant
+git remote rm nomDepot => supprime un dépot distant
+git remote rename old_name new_name => renommer un dépot distant
+
+$git clone -a unautrenom
+
+
+$git push -set -upstream origin nom_branche => Envoie d'une branche inconnue au dépot distant
+
+
+$git push origin -tags => Envoie tout les tags vers le dépot distant
+$git push origin nom_tag => Envoie uniquement le tag qui correspond au nom_tag vers le dépot distant
+
+$git stash => mettre tout les mod
+git stash apply => Récupérer les modifications
+git stash apply @{2} => 
+
+git clean -n => permet de voir les fichiers avant de les supprimer
+git clean => supprime les fichiers
+
+Identifier l'auteur d'une ligne de code
+$git blame nomFichier
+$git blame -L ligne_de_début, ligne_de_fin
+
+
+Recherche dichotomique
+Permet de rechercher le commit ou un problème est apparu dans un fichier
+$ git bisect start => démarrage
+$ git bisect bad
+
+    PRéciser un commit ou il n'ya eu aucun problème
+    $git bisect good commit

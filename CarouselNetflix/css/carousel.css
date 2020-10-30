@@ -1,0 +1,37 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.card:hover{
+    display : block;
+    transform: scale(1.2);
+    z-index:1;
+    transition-delay: 2s;
+}
+
+.card
+{
+    width:20%;
+    margin: 0.2em;
+}
+
+.card-header
+{
+    padding:0px 0px 0px 0px !important;
+    background-size: cover;
+}
+
+.card-body .card-footer{
+    display:block;
+}
+
+
+
+.card img {
+    width:100%;
+}

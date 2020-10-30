@@ -1,0 +1,291 @@
+*{
+    padding:0;
+    margin:0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/*HEADER*/
+header{
+    width:100%;
+    height:4vw;
+    background-color: white; 
+    display:flex;
+    box-shadow: 0px 3px 3px darkslategray;
+    position:sticky;
+    top:0;
+    
+}
+
+.empty{
+    width:50%;
+    height: 4vw;
+}
+
+.empty p 
+{
+    margin: 5px;
+}
+
+.empty p a
+{
+    color:darkolivegreen;
+    font-family: 'Rochester', cursive;
+    font-size: 40px;
+    font-weight: bold;
+    padding-left: 20px; 
+}
+
+header nav{
+    height: 4vw;
+    width:50%;
+}
+
+header nav ul 
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+header nav ul li
+{
+    width: 50%;
+    height: 4vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:darkolivegreen;        
+    width:10em;
+    height:2em;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav a:hover{
+    color:darkslategray;
+    background-color: white;
+    border-top:1px solid darkolivegreen;
+    cursor: pointer;
+}
+
+/*MAIN*/
+main
+{
+    width: 70%;
+    margin : 0 auto;
+    background-color: lightgray;
+}
+
+main section
+{
+    width:100%;
+}
+
+.haut{
+    background-color: white;
+    height:35vw;
+}
+.milieu{
+    background-color: white;
+}
+.bas{
+    background-color: white;
+}
+
+.ligne
+{
+    height:1px;
+    background-color:black;
+    width:98%;
+    margin: 0 auto;
+}
+
+/* PREMIERE SECTION */
+
+h1
+{
+    font-family: 'Rochester', cursive;
+    padding : 10px;
+    font-size: 3em;
+}
+
+.haut .image{
+background-image: url(https://flexjob.fr/var/site/storage/images/_aliases/unique_slide/9/4/4/2/102449-1-fre-FR/developpeur-react-cdi.jpeg);
+
+width:100%;
+height:35vw;
+}
+
+.containerCard
+{
+    display:flex;
+    justify-content: space-between;
+}
+
+.card
+{
+    height:25vw;
+    width:25%;
+    box-shadow:1px 1px 3px 3px darkolivegreen;
+    border-radius: 5%;
+    margin-top: 25px    ;
+}
+
+.cardHaut
+{
+    display:flex;
+    justify-content: center;
+    height:45%;
+    overflow: hidden;
+}
+
+img{
+    background-size: cover;
+    border-radius:5%;
+}
+
+.ligneCard
+{
+    height:1px;
+    background-color:black;
+    width:80%;
+    margin: 0 auto;
+}
+
+.cardMid
+{
+    width:80%;
+    margin:0 auto;    
+    height: 40%;
+}
+
+.cardMid h3{
+    margin: 5px 0px;
+}
+
+.cardMid p
+{
+    color:gray;
+    margin-bottom: 10px;
+}
+
+.cardBas
+{
+    display:flex;
+    justify-content: center;
+    height: 20%;
+    
+}
+.cardBas a
+{
+    width:75%;
+    text-align: center;
+    padding-top: 10px;
+    color:black;
+    border-radius : 0px 5px 0px 5px;
+    background-color: darkolivegreen;
+    height:2vw;
+}
+
+/* BAS**/
+
+.bigCard
+{
+    box-shadow:1px 1px 3px 3px darkolivegreen;
+    border-radius: 10px;
+    padding:10px;
+    margin: 15px 0px;
+}
+.bigCardHaut
+{
+    display:flex;
+    margin-top: 25px;
+    
+}
+
+.bigCardHaut h3
+{
+    margin: 10px;
+    color:darkolivegreen;
+}
+
+.bigCardHaut p
+{
+    margin:10px;
+    color:gray;
+    font-size: 18px;
+}
+
+.bigCardHaut img
+{
+    margin: 10px;
+}
+
+.bigCardMid h3
+{
+    margin: 10px;
+    color:darkolivegreen;
+}
+
+.bigCardMid p
+{
+    margin:10px;
+    color:gray;
+    font-size: 18px;
+}
+
+
+/*FOOTER*/
+
+footer{
+    width:100%;
+    height: 15vw;
+    background-color: darkslategrey;
+}
+
+footer div 
+{
+    height:15vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items : center;
+    margin:0 auto;
+}
+
+footer div a 
+{
+    color: white;
+    font-size: 20px;
+}
+
+footer div p
+{
+    margin:10px;
+    width: 10%;
+}
+
+footer i
+{
+    display:block;
+    color:white;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right:5px;
+    padding:10px;
+    font-size: 25px;
+}
+
+.copyright
+{
+    color:white;
+}
